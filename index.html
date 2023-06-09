@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Results summary component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+				height: 100vh;
+				background: #eeeeee;
+				flex-direction: column;
+			}
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+				bottom: 1em;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+			._wrapper {
+				display: flex;
+				flex-direction: row;
+				gap: 40px;
+				border-radius: 20px;
+
+				width: 736px;
+				height: 512px;
+				position: absolute;
+				left: 24.86%;
+				right: 24.03%;
+				top: 26.3%;
+				bottom: 26.3%;
+
+				/* White */
+
+				background: #ffffff;
+				box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+				border-radius: 32px;
+				filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			}
+			._result-header {
+				position: absolute;
+				width: 125px;
+				height: 31px;
+				left: calc(50% - 125px / 2 - 186.5px);
+				top: calc(50% - 31px / 2 - 202.5px);
+
+				/* Heading M */
+
+				font-family: "Hanken Grotesk";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 31px;
+
+				/* Light Blue */
+
+				color: #cac9ff;
+			}
+			._percentage-wrappper {
+				width: 200px;
+				height: 200px;
+				left: 436px;
+				top: 388px;
+			}
+			._76 {
+				position: absolute;
+				width: 81px;
+				height: 72px;
+				left: calc(50% - 81px / 2 - 184.5px);
+				top: calc(50% - 72px / 2 - 61px);
+
+				/* Heading XL */
+
+				font-family: "Hanken Grotesk";
+				font-style: normal;
+				font-weight: 800;
+				font-size: 72px;
+				line-height: 72px;
+				/* identical to box height, or 100% */
+
+				text-align: center;
+
+				/* White */
+
+				color: #ffffff;
+			}
+			._100 {
+				position: absolute;
+				width: 52px;
+				height: 23px;
+				left: calc(50% - 52px / 2 - 185px);
+				top: calc(50% - 23px / 2 - 9.5px);
+
+				/* Body (Bold) */
+
+				font-family: "Hanken Grotesk";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 23px;
+
+				/* Light Blue */
+
+				color: #cac9ff;
+
+				mix-blend-mode: normal;
+				opacity: 0.52;
+			}
+			._great {
+				width: 83px;
+				height: 42px;
+				left: calc(50% - 83px / 2 - 2.5px);
+				top: calc(50% - 42px / 2 - 46px);
+
+				/* Heading L */
+
+				font-family: "Hanken Grotesk";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 42px;
+				/* identical to box height */
+
+				text-align: center;
+
+				/* White */
+
+				color: #ffffff;
+			}
+			._desc {
+				width: 260px;
+				height: 69px;
+				left: calc(50% - 260px / 2);
+				top: calc(50% - 69px / 2 + 23.5px);
+
+				/* Body */
+
+				font-family: "Hanken Grotesk";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 23px;
+				text-align: center;
+
+				/* Light Blue */
+
+				color: #cac9ff;
+			}
+			._left-bottom {
+				position: absolute;
+				right: 53.33%;
+				top: 57.04%;
+				bottom: 30.56%;
+			}
+			._left-card {
+				padding: 20px;
+				width: 368px;
+				height: 512px;
+				left: 352px;
+				top: 284px;
+				left: 24.86%;
+				right: 49.58%;
+				top: 26.3%;
+				bottom: 26.3%;
+
+				/* Gradient 1 */
+
+				background: linear-gradient(
+					180deg,
+					#7755ff 0%,
+					#6943ff 0.01%,
+					#2f2ce9 100%
+				);
+				border-radius: 32px;
+			}
+			._right-card {
+				display: flex;
+				flex-direction: column;
+				align-items: space-between;
+				width: 50%;
+			}
+			.summary-card {
+				display: flex;
+				gap: 90px;
+				border-radius: 10px;
+				height: 2rem;
+				padding: 5px;
+			}
+			button {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				border-radius: 20px;
+				height: 2.5rem;
+				border: none;
+				color: #eeeeee;
+				background-image: linear-gradient(#6440fa, #342eea);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="_wrapper">
+			<div class="_left-card">
+				<p class="_result-header"> Your Result </p>
+				<div class="_percentage-wrappper">
+					<span class="_76">76</span>
+					<span class="_100"> of 100 </span>
+				</div>
+				<div class="_left-bottom"
+					><h2 class="_great"> Great </h2>
+					<p class="_desc">
+						You scored higher than 65% of the people who have taken these tests.
+					</p></div
+				>
+			</div>
+			<div class="_right-card">
+				<h3> Summary </h3>
+				<div style="display: flex; flex-direction: column; gap: 40px">
+					<div style="background-color: #d4b6b2" class="summary-card">
+						<div style="display: flex; gap: 10px; color: #f55; padding: 7px">
+							<img alt="Reaction icon" src="/assets/images/icon-reaction.svg" />
+							Reaction
+						</div>
+						<div style="display: flex; gap: 10px; padding: 7px">
+							<span>80 </span>
+							<span> / </span>
+							<span> 100 </span>
+						</div>
+					</div>
+					<div style="background-color: #e4cf9e" class="summary-card">
+						<div style="display: flex; gap: 10px; color: #ffb21e; padding: 7px">
+							<img alt="Memory icon" src="/assets/images/icon-memory.svg" />
+							Memory
+						</div>
+						<div style="position: relative; right: 0">
+							<span>92</span>
+							<span> / </span>
+							<span> 100 </span>
+						</div>
+					</div>
+					<div style="background-color: #aae0da" class="summary-card">
+						<div style="display: flex; gap: 10px; color: #6fc8b7; padding: 7px">
+							<img alt="Verbal icon" src="/assets/images/icon-verbal.svg" />
+							Verbal
+						</div>
+						<div style="display: flex; gap: 10px; padding: 7px">
+							<span>61</span>
+							<span> / </span>
+							<span> 100 </span>
+						</div>
+					</div>
+
+					<div style="background-color: #acace0" class="summary-card">
+						<div style="display: flex; gap: 10px; color: #6e72aa; padding: 7px">
+							<img alt="Visual icon" src="/assets/images/icon-visual.svg" />
+							Visual
+						</div>
+						<div style="display: flex; gap: 10px; padding: 7px">
+							<span>72 </span>
+							<span> / </span>
+							<span> 100 </span>
+						</div>
+					</div>
+				</div>
+				<button> Continue </button>
+			</div>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Rushi</a>.
+		</div>
+	</body>
+</html>
